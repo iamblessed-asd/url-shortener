@@ -1,4 +1,3 @@
-// internal/shortener/auth.go
 package shortener
 
 import (

@@ -1,17 +1,3 @@
-// package shortener
-
-// import (
-// 	"crypto/sha1"
-// 	"encoding/base64"
-// )
-
-// func GenerateCode(url string) string {
-// 	h := sha1.New()
-// 	h.Write([]byte(url))
-// 	hash := h.Sum(nil)
-// 	return base64.URLEncoding.EncodeToString(hash)[:8]
-// }
-
 package shortener
 
 import (

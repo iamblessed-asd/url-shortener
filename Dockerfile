@@ -1,4 +1,3 @@
-# Этап сборки
 FROM golang:1.24 AS builder
 
 WORKDIR /app
@@ -18,6 +17,7 @@ WORKDIR /app
 
 COPY --from=builder /app/url-shortener .
 COPY --from=builder /app/templates ./templates
+COPY --from=builder /app/static ./static
 
 EXPOSE 8080
 

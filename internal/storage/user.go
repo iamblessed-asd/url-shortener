@@ -4,10 +4,12 @@ import (
 	"context"
 	"database/sql"
 	"errors"
+	"log"
 )
 
 func (s *Storage) CreateUser(ctx context.Context, username, passwordHash string) error {
 	_, err := s.DB.Exec(ctx, "INSERT INTO users (username, password_hash) VALUES ($1, $2)", username, passwordHash)
+	log.Println("Inserted user ", username, " into DB")
 	return err
 }
 
